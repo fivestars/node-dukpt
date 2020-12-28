@@ -46,7 +46,7 @@ class Dukpt {
     static _createDataKeyHex(ipek, ksn) {
         const derivedPEK = Dukpt._deriveKeyHex(ipek, ksn);
 
-        const CBC = 1; // cipher block chaining enabled
+        const CBC = 0; // cipher block chaining enabled
         const iv = '\0\0\0\0\0\0\0\0'; // initial vector
         const variantMask = '0000000000FF00000000000000FF0000'; // data variant
 
@@ -96,7 +96,7 @@ class Dukpt {
     }
 
     static encryptTDES(key, data, encryptTrueFalse) {
-        const CBC = 1; // cipher block chaining enabled
+        const CBC = 0; // cipher block chaining enabled
         const iv = '\0\0\0\0\0\0\0\0'; // initial vector
 
         try {
@@ -239,7 +239,7 @@ class Dukpt {
     }
 
     static _createIPEK(bdk, ksn) {
-        const CBC = 1; // cipher block chaining enabled
+        const CBC = 0; // cipher block chaining enabled
         const iv = '\0\0\0\0\0\0\0\0'; // initial vector
 
         let key = Dukpt._EDE3KeyExpand(bdk); // make 24-byte key
@@ -331,7 +331,7 @@ class Dukpt {
     }
 
     static _encryptRegister(key, reg) {
-        const CBC = 1; // cipher block chaining enabled
+        const CBC = 0; // cipher block chaining enabled
         const iv = '\0\0\0\0\0\0\0\0'; // initial vector
 
         const bottom8 = key.substring(key.length - 8); // bottom 8 bytes
