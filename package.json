@@ -58,7 +58,7 @@
     "gulp-coveralls": "0.1.4",
     "gulp-eslint": "3.0.1",
     "gulp-istanbul": "1.1.1",
-    "gulp-mocha": "3.0.1",
+    "gulp-mocha": "8.0.0",
     "randexp": "0.4.4",
     "should": "11.1.2",
     "sinon": "1.17.7"
